@@ -21,3 +21,15 @@ The template defines the required keys. Empty values count as assignments. Extra
 | 2 | Invalid input or unreadable file |
 
 Run the test suite with `python -m unittest discover -s tests -v`.
+
+## Browser version
+
+Compare files without installing Python. Select a template and target or use **Try example**. The browser reads the files locally, reports names only, and does not store or upload file contents. Each input can be up to 1 MiB and must be UTF-8.
+
+Serve the static files locally from the repository root:
+
+```sh
+python -m http.server 8000 --directory web
+```
+
+Open http://localhost:8000. For Vercel, use the repository root and select **Other** if prompted for a framework. The root `vercel.json` publishes `web/` without a build or Python web entry point.

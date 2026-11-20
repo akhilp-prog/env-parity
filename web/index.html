@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Env Parity — Compare dotenv keys</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <header><strong>ENV / PARITY</strong><a href="https://github.com/akhilp-prog/env-parity">GitHub ↗</a></header>
+  <main>
+    <h1>Compare environment files.</h1>
+    <p>Find missing, extra, and duplicate keys before you deploy.</p>
+    <p class="privacy">Files stay in this browser. Results show key names only.</p>
+    <div class="inputs">
+      <label>Template <span>Defines the required keys</span><input id="template" type="file"></label>
+      <label>Target <span>The environment to check</span><input id="target" type="file"></label>
+    </div>
+    <div class="actions">
+      <label class="strict"><input id="strict" type="checkbox"> Fail on extra keys</label>
+      <button id="example" type="button">Try example</button>
+      <button id="compare" type="button">Compare keys</button>
+    </div>
+    <p id="status" role="status"></p>
+    <section id="results" aria-label="Comparison results" hidden></section>
+  </main>
+</body>
+</html>
